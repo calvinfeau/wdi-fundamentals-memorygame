@@ -53,5 +53,14 @@ var createBoard = function() {
 		document.getElementById('game-board').appendChild(cardElement);
 	}
 };
+var reloadPage = function() {
+	location.reload();
+};
+
+var resetBoard = function() {
+	var resetButton = document.getElementById('reset-board');
+	resetButton.addEventListener('click', reloadPage);
+};
 
 createBoard();
+resetBoard();
